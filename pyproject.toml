@@ -3,7 +3,7 @@ name = "signforge-verify"
 version = "1.0.0"
 description = "Verify SignForge-signed PDFs offline — W3C VC, ECDSA P-256, Merkle proofs"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
 requires-python = ">=3.9"
 authors = [{name = "SignForge", email = "hello@signforge.io"}]
 keywords = [
@@ -39,5 +39,5 @@ Issues = "https://github.com/kumarprobeops/signforge-verify-python/issues"
 "Proof Format Spec" = "https://signforge.io/docs/proof-format"
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling<1.27"]
 build-backend = "hatchling.build"
