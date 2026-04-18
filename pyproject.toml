@@ -1,0 +1,43 @@
+[project]
+name = "signforge-verify"
+version = "1.0.0"
+description = "Verify SignForge-signed PDFs offline — W3C VC, ECDSA P-256, Merkle proofs"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "SignForge", email = "hello@signforge.io"}]
+keywords = [
+    "signforge", "verify", "e-signature", "verifiable-credentials",
+    "w3c-vc", "ecdsa", "merkle", "pdf", "digital-signature",
+    "transparency-log", "proof", "offline-verification", "docusign-alternative",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = ["cryptography>=41.0"]
+
+[project.optional-dependencies]
+pdf = ["PyMuPDF>=1.23"]
+
+[project.scripts]
+signforge-verify = "signforge_verify.cli:main"
+
+[project.urls]
+Homepage = "https://signforge.io"
+Documentation = "https://signforge.io/docs/verification-architecture"
+Repository = "https://github.com/kumarprobeops/signforge-verify-python"
+Issues = "https://github.com/kumarprobeops/signforge-verify-python/issues"
+"Proof Format Spec" = "https://signforge.io/docs/proof-format"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
